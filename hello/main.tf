@@ -4,8 +4,8 @@ provider "aws" {
   secret_key = "aCsoC0455CqoYNevDS438zRgZRx1RWJCgYkTEfB6"
 }
 resource "aws_instance" "mynewinstance" {
-  ami           = "ami-090fa75af13c156b4"
-  instance_type = "t2.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_type
   tags = {
     Name = "secondinstance"
 }
